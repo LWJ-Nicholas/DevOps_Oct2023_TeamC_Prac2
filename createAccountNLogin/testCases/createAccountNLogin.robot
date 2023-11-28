@@ -24,6 +24,7 @@ Create Account
     Click Element    ${notif_checkbox}
     Input Text    locator=${password_input_01}    text=${password}
     Click Element    ${month_dropdown}
+    Sleep    1s
     Click Element    ${month}   
     Click Element    ${day_dropdown}
     Sleep    1s
@@ -48,13 +49,3 @@ Login
     Sleep    2s
     Pause Execution 
     Close Browser
-
-TRY / EXCEPT: Catch any exception
-    [Documentation]    In case of error screenshot the page
-    TRY
-        Fail
-    EXCEPT
-        Log    Error please refer to screenshot captured
-        Capture Page Screenshot
-        Close Browser
-    END
