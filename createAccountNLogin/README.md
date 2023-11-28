@@ -1,1 +1,0 @@
-# DevOps_Oct2023_TeamC_Prac2
