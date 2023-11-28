@@ -1,55 +1,60 @@
 *** Settings ***
 Library    SeleniumLibrary
-Library    OperatingSystem
 Library    String
 Library    Dialogs
 Library    RequestsLibrary
-Documentation    Hanisah Test case of Create account and Login - Fail, Success
+Resource    variables.robot
+Documentation    Hanisah Test case of Create account and Login
 
-*** Variables ***
-${url}    https://www.lazada.sg/
-
-${email}    basic_emailever@gmail.com
-${full_name}    Basic NameEver
-${password}    P@55w0rd123@
-
-${sign_up_button}    //a[.//text() = 'sign up']
-${sign_up_using_email_button}    //button[.//text() = 'Sign up with Email']
-${email_input}    //input[@placeholder='Please enter your email']
-${full_name_input}    //input[@placeholder='First Last']
-${notif_checkbox}    //input[@id='enableNewsletter']
-${password_input}    //input[@placeholder='Minimum 8 characters with number, letter and characters.']
-${month_dropdown}    //span[@id='month']
-${month}    //ul[@class='next-menu-content']/li[4]
-${day_dropdown}    //span[@id='day']
-${day}    //ul[@class='next-menu-content']/li[27]
-${year_dropdown}    //span[@id='year']
-${year}    //ul[@class='next-menu-content']/li[23]
-${gender_dropdown}    //span[@id='gender']
-${gender}    //ul[@class='next-menu-content']/li[2]
+*** Keywords ***
+Check Website Online
+    Create Session    ${session_name}    ${url}
+    ${response}=    GET On Session    ${session_name}    \
+    Should Be Equal As Strings    ${response.status_code}    200
 
 *** Test Cases ***
 Create Account
+    [Documentation]    This is to fill in the sign up form and try to bypass the robot detection system using Pause Execution to manually slide/capcha
+    Check Website Online
     Open Browser    ${url}    chrome
     Click Element    ${sign_up_button}
     Click Element    ${sign_up_using_email_button}
-    Input Text    locator=${email_input}    text=${email}
+    Input Text    locator=${email_input_01}    text=${email}
     Input Text    locator=${full_name_input}    text=${full_name}
     Click Element    ${notif_checkbox}
-    Input Text    locator=${password_input}    text=${password}
+    Input Text    locator=${password_input_01}    text=${password}
     Click Element    ${month_dropdown}
     Click Element    ${month}   
     Click Element    ${day_dropdown}
-    Sleep    1
+    Sleep    1s
     Click Element    ${day}   
     Click Element    ${year_dropdown}
-    Sleep    1
+    Sleep    1s
     Click Element    ${year}   
     Click Element    ${gender_dropdown}
-    Sleep    1
+    Sleep    1s
     Click Element    ${gender}   
-    Sleep    5
+    Pause Execution 
     Close Browser
 
-Login Fail and pass
-    
+Login
+    [Documentation]    This is to fill in the login form and try to bypass the robot detection system using Pause Execution to manually slide/capcha
+    Check Website Online
+    Open Browser    ${url}    chrome
+    Click Element    ${login_button}
+    Input Text    locator=${email_input_02}    text=${email}
+    Sleep    2s
+    Input Text    locator=${password_input_02}    text=${password}
+    Sleep    2s
+    Pause Execution 
+    Close Browser
+
+TRY / EXCEPT: Catch any exception
+    [Documentation]    In case of error screenshot the page
+    TRY
+        Fail
+    EXCEPT
+        Log    Error please refer to screenshot captured
+        Capture Page Screenshot
+        Close Browser
+    END
