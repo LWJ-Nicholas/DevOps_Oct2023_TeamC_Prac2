@@ -4,7 +4,7 @@ Library    String
 Library    Dialogs
 Library    RequestsLibrary
 Resource    variables.robot
-Documentation    Hanisah Test case of Create account and Login
+Documentation    Hanisah Test case of Create account n Login
 
 *** Keywords ***
 Check Website Online
