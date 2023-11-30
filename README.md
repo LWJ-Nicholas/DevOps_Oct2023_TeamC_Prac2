@@ -10,10 +10,10 @@
 ![alt text](/screenshots/hanisah_5.png)
 
 3. Follow Seller - Elliot
-4. Add to cart (After Login) - Kendric
-5.  Clear Button for Filter - Kendric
-6.  Chatbot - Nicholas
-7.  Filter - Nicholas
+4.  Add to cart (After Login) - Kendric
+5.  Clear Button for Search - Kendric
+6.  View Seller Profile - Nicholas
+7.  Add Filter - Nicholas
 8.  Sort - Harshini
 9.  Search - Harshini
-10.   Collect Voucher - Elliot
+10. Collect Voucher - Elliot
