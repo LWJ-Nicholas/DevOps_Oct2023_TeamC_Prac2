@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231130 23:26:15.659" rpa="false" schemaversion="4">
+<suite id="s1" name="FilterAndSeller" source="D:\Year_3\3.2\DOP\Practicals\Practical_2\DevOps_Oct2023_TeamC_Prac2\Nicholas\FilterAndSeller.robot">
+<test id="s1-t1" name="Verify that Filter function works" line="17">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231130 23:26:15.796" level="INFO">Opening browser 'chrome' to base url 'https:\www.lazada.sg'.</msg>
+<status status="PASS" starttime="20231130 23:26:15.796" endtime="20231130 23:26:39.755"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:q</arg>
+<arg>${search}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231130 23:26:39.758" level="INFO">Typing text 'gaming laptops' into text field 'id:q'.</msg>
+<status status="PASS" starttime="20231130 23:26:39.757" endtime="20231130 23:26:40.208"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath= ${search_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231130 23:26:40.208" level="INFO">Clicking button 'xpath= //*[@id="topActionHeader"]/div/div[2]/div/div[2]/form/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20231130 23:26:40.208" endtime="20231130 23:27:02.334"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath= ${location_filter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 23:27:02.335" level="INFO">Clicking element 'xpath= //*[@id="root"]/div/div[2]/div[1]/div/div[2]/div/div[4]/div[2]/div/div/label[1]/span[1]/input'.</msg>
+<status status="PASS" starttime="20231130 23:27:02.335" endtime="20231130 23:27:02.670"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath= ${condition_filter}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 23:27:02.671" level="INFO">Clicking element 'xpath= //*[@id="root"]/div/div[2]/div[1]/div/div[2]/div/div[7]/div[2]/div/div/label[1]/span[1]/input'.</msg>
+<status status="PASS" starttime="20231130 23:27:02.670" endtime="20231130 23:27:02.826"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 23:27:07.829" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231130 23:27:02.826" endtime="20231130 23:27:07.829"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231130 23:27:08.010" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231130 23:27:07.829" endtime="20231130 23:27:08.010"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231130 23:27:08.014" endtime="20231130 23:27:10.149"/>
+</kw>
+<status status="PASS" starttime="20231130 23:26:15.796" endtime="20231130 23:27:10.149"/>
+</test>
+<test id="s1-t2" name="Verify that User Can View Seller Profile" line="28">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231130 23:27:10.154" level="INFO">Opening browser 'chrome' to base url 'https:\www.lazada.sg'.</msg>
+<status status="PASS" starttime="20231130 23:27:10.153" endtime="20231130 23:27:33.630"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath= ${laz_mall}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 23:27:33.631" level="INFO">Clicking element 'xpath= //*[@id="J_PCChannels"]/div/a[1]'.</msg>
+<status status="PASS" starttime="20231130 23:27:33.630" endtime="20231130 23:27:56.254"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath= ${seller}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 23:27:56.254" level="INFO">Clicking element 'xpath= //div[@class='lzd-site-nav-menu lzd-site-nav-menu-active ']/div[@class='lzd-site-menu-nav-container']/nav[@class='lzd-menu-labels']/a[@class='lzd-menu-labels-item'][2]'.</msg>
+<status status="PASS" starttime="20231130 23:27:56.254" endtime="20231130 23:28:18.531"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath= ${profile}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 23:28:18.532" level="INFO">Clicking element 'xpath= //*[@id="pi-component-container"]/div/div[2]/div/div/div/div[2]/div[2]/div/div/div[2]/a[3]'.</msg>
+<status status="PASS" starttime="20231130 23:28:18.532" endtime="20231130 23:28:40.571"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 23:28:45.572" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231130 23:28:40.571" endtime="20231130 23:28:45.572"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231130 23:28:45.712" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231130 23:28:45.572" endtime="20231130 23:28:45.712"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231130 23:28:45.712" endtime="20231130 23:28:47.898"/>
+</kw>
+<status status="PASS" starttime="20231130 23:27:10.152" endtime="20231130 23:28:47.899"/>
+</test>
+<status status="PASS" starttime="20231130 23:26:15.659" endtime="20231130 23:28:47.900"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="FilterAndSeller">FilterAndSeller</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
