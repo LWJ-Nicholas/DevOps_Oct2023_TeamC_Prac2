@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.5 on win32)" generated="20231130 19:40:28.549" rpa="false" schemaversion="4">
+<suite id="s1" name="TestCases" source="C:\Users\user\Desktop\NP\Y3Semester2\Devops\Week03\Practical2\TestCases">
+<suite id="s1-s1" name="SearchFeature" source="C:\Users\user\Desktop\NP\Y3Semester2\Devops\Week03\Practical2\TestCases\SearchFeature.robot">
+<test id="s1-s1-t1" name="Seach for Item" line="11">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${website_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231130 19:40:29.032" level="INFO">Opening browser 'chrome' to base url 'https://www.lazada.sg/'.</msg>
+<status status="PASS" starttime="20231130 19:40:29.032" endtime="20231130 19:41:00.548"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231130 19:41:00.733" level="INFO">Page title is 'Lazada.sg: Online Shopping Singapore - Electronics, Home Appliances, Mobiles, Tablets &amp; more'.</msg>
+<status status="PASS" starttime="20231130 19:41:00.551" endtime="20231130 19:41:00.733"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input.search-box__input--O34g</arg>
+<arg>${item_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231130 19:41:00.737" level="INFO">Typing text 'pen' into text field 'css:input.search-box__input--O34g'.</msg>
+<status status="PASS" starttime="20231130 19:41:00.733" endtime="20231130 19:41:02.129"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.search-box__button--1oH7</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 19:41:02.131" level="INFO">Clicking element 'css:button.search-box__button--1oH7'.</msg>
+<status status="PASS" starttime="20231130 19:41:02.131" endtime="20231130 19:41:24.635"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:h1.JrAyI</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231130 19:41:25.232" level="INFO">Element 'css:h1.JrAyI' is displayed.</msg>
+<status status="PASS" starttime="20231130 19:41:24.635" endtime="20231130 19:41:25.232"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 19:41:27.234" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231130 19:41:25.234" endtime="20231130 19:41:27.234"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231130 19:41:27.234" endtime="20231130 19:41:29.670"/>
+</kw>
+<status status="PASS" starttime="20231130 19:40:29.032" endtime="20231130 19:41:29.671"/>
+</test>
+<status status="PASS" starttime="20231130 19:40:28.601" endtime="20231130 19:41:29.672"/>
+</suite>
+<suite id="s1-s2" name="SortFeature" source="C:\Users\user\Desktop\NP\Y3Semester2\Devops\Week03\Practical2\TestCases\SortFeature.robot">
+<test id="s1-s2-t1" name="Sort Items" line="11">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${website_url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231130 19:41:29.685" level="INFO">Opening browser 'chrome' to base url 'https://www.lazada.sg/'.</msg>
+<status status="PASS" starttime="20231130 19:41:29.685" endtime="20231130 19:41:55.727"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231130 19:41:56.602" level="INFO">Page title is 'Lazada.sg: Online Shopping Singapore - Electronics, Home Appliances, Mobiles, Tablets &amp; more'.</msg>
+<status status="PASS" starttime="20231130 19:41:55.727" endtime="20231130 19:41:56.602"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input.search-box__input--O34g</arg>
+<arg>${item_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231130 19:41:56.602" level="INFO">Typing text 'pen' into text field 'css:input.search-box__input--O34g'.</msg>
+<status status="PASS" starttime="20231130 19:41:56.602" endtime="20231130 19:41:56.999"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:button.search-box__button--1oH7</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 19:41:56.999" level="INFO">Clicking element 'css:button.search-box__button--1oH7'.</msg>
+<status status="PASS" starttime="20231130 19:41:56.999" endtime="20231130 19:42:19.738"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:h1.JrAyI</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231130 19:42:20.402" level="INFO">Element 'css:h1.JrAyI' is displayed.</msg>
+<status status="PASS" starttime="20231130 19:42:19.740" endtime="20231130 19:42:20.402"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 19:42:22.415" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231130 19:42:20.404" endtime="20231130 19:42:22.415"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.ant-select-selector</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 19:42:22.417" level="INFO">Clicking element 'css:div.ant-select-selector'.</msg>
+<status status="PASS" starttime="20231130 19:42:22.417" endtime="20231130 19:42:22.873"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 19:42:24.881" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231130 19:42:22.873" endtime="20231130 19:42:24.881"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div[data-spm-click="gostr=/lzdse.result.sort;locaid=d2"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231130 19:42:24.881" level="INFO">Clicking element 'css:div[data-spm-click="gostr=/lzdse.result.sort;locaid=d2"]'.</msg>
+<status status="PASS" starttime="20231130 19:42:24.881" endtime="20231130 19:42:25.331"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231130 19:42:27.339" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231130 19:42:25.334" endtime="20231130 19:42:27.340"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231130 19:42:27.340" endtime="20231130 19:42:29.848"/>
+</kw>
+<status status="PASS" starttime="20231130 19:41:29.685" endtime="20231130 19:42:29.848"/>
+</test>
+<status status="PASS" starttime="20231130 19:41:29.672" endtime="20231130 19:42:29.848"/>
+</suite>
+<status status="PASS" starttime="20231130 19:40:28.553" endtime="20231130 19:42:29.848"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="TestCases">TestCases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="SearchFeature">TestCases.SearchFeature</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="SortFeature">TestCases.SortFeature</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
